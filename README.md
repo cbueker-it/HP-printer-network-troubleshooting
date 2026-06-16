@@ -1,25 +1,28 @@
-HP-printer-network-troubleshooting
+**HP Printer Network Troubleshooting**
 
-I documented the troubleshooting process used to reconnect an HP LaserJet M29w printer after relocating to a new residence. This project demonstrates printer network troubleshooting, wireless reconfiguration, device validation, and packet capture analysis using TShark.
+I documented the troubleshooting process that I used to reconnect an HP LaserJet M29w printer after moving residences with my wife. This project demonstrates printer network troubleshooting, wireless reconfiguration, device validation, and packet capture analysis using `tshark`.
 
 Lab Objectives
-Restore printer connectivity to a wireless network
-Verify printer network configuration
-Confirm printer visibility on the local network
-Access and review the printer web interface
-Validate network communication using packet capture analysis
-Document the troubleshooting process and resolution
+- Restore printer connectivity to a wireless network
+- Verify printer network configuration
+- Confirm printer visibility on the local network
+- Access and review the printer web interface
+- Validate network communication using packet capture analysis
+- Document the troubleshooting process and resolution
+
 Environment
-Ubuntu Linux Desktop
-HP LaserJet M29w
-Spectrum Router
-Google Chrome
-TShark
+- Ubuntu Linux Desktop
+- HP LaserJet M29w
+- Spectrum Router
+- Google Chrome
+- `tshark'
+
 Problem
 
 After moving to a new residence, the printer was no longer connected to the wireless network. As a result, printing services and access to the printer's management interface were unavailable.
 
 Troubleshooting Process
+
 Printer Network Validation
 
 I accessed the printer's embedded web interface and reviewed the network summary page to verify that the device successfully obtained network settings through DHCP.
@@ -32,7 +35,7 @@ Image: Printer Network Summary
 
 Printer Web Interface Verification
 
-I accessed the printer's web management interface to confirm operational status and verify that the printer could be managed across the network.
+I opened the printer's web management interface to check its operational status and confirm it could be managed across the network.
 
 This provided confirmation that network communication between the workstation and printer was functioning correctly.
 
@@ -50,16 +53,15 @@ Image: Router Device Detection
 
 <img src="images/router-device-detection-redacted.png" alt="Router Device Detection" width="700"/>
 
-Packet Capture Analysis with TShark
+Packet Capture Analysis with 'tshark'
 
-I used TShark to capture network traffic between the workstation and printer.
+I used 'tshark' to capture network traffic between my Ubuntu driver and the printer.
 
 The packet capture confirmed:
-
-TCP three-way handshake activity
-HTTP GET requests from the workstation
-HTTP 200 OK responses from the printer
-Successful communication between both devices
+- TCP three-way handshake activity
+- HTTP GET requests from the workstation
+- HTTP 200 OK responses from the printer
+- Successful communication between both devices
 
 This provided packet-level validation that network connectivity and printer services were functioning correctly.
 
@@ -68,16 +70,18 @@ Image: TShark Validation
 <img src="images/tshark validation bash output.png" alt="TShark Validation" width="700"/>
 
 Skills Practiced
-Network Troubleshooting
-Wireless Device Configuration
-DHCP Validation
-Embedded Web Interface Administration
-TCP/IP Fundamentals
-Packet Capture Analysis
-TShark
-HTTP Communication Analysis
-Technical Documentation
+- Network Troubleshooting
+- Wireless Device Configuration
+- DHCP Validation
+- Embedded Web Interface Administration
+- TCP/IP Fundamentals
+- Packet Capture Analysis
+- 'tshark'
+- HTTP Communication Analysis
+- Technical Documentation
+
 Key Networking Concepts Observed
+
 TCP Three-Way Handshake
 
 The packet capture showed the standard TCP connection process:
@@ -99,14 +103,14 @@ DHCP Network Assignment
 The printer received its network configuration automatically through DHCP, allowing it to join the network without manual IP configuration.
 
 Lessons Learned
-Network configuration reports provide valuable troubleshooting information.
-Embedded web interfaces can quickly validate printer status and connectivity.
-Router management portals help verify device presence on a network.
-Packet captures provide evidence of successful communication at the protocol level.
-TShark is an effective command-line tool for network troubleshooting and analysis.
+- Network configuration reports provide valuable troubleshooting information.
+- Embedded web interfaces can quickly validate printer status and connectivity.
+- Router management portals help verify device presence on a network.
+- Packet captures provide evidence of successful communication at the protocol level.
+- 'tshark' is an effective command-line tool for network troubleshooting and analysis.
 
 Summary
 
 This project demonstrates practical printer troubleshooting and network validation in a home lab environment. It shows how wireless configuration, device management, router verification, and packet capture analysis can be combined to diagnose and validate network-connected devices.
 
-Back to GitHub Profile
+[`Back to GitHub Profile`](https://www.github.com/cbueker-it)
