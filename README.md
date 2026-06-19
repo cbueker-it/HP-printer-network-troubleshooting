@@ -7,7 +7,7 @@ Lab Objectives
 - Verify printer network configuration
 - Confirm printer visibility on the local network
 - Access and review the printer web interface
-- Validate network communication using packet capture analysis
+- Use a packet capture analysis tool to test and validate network communication
 - Document the troubleshooting process and resolution
 
 Environment
