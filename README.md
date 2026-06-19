@@ -19,15 +19,23 @@ Environment
 
 Problem
 
-After moving to a new residence, the printer was no longer connected to the wireless network. As a result, printing services and access to the printer's management interface were unavailable.
+After moving to a new residence, my printer/scanner was no longer connected to the wireless network. As a result, I was unable to print, nor access the printer's management interface.
 
 Troubleshooting Process
 
 Printer Network Validation
 
-I accessed the printer's embedded web interface and reviewed the network summary page to verify that the device successfully obtained network settings through DHCP.
+During troubleshooting, I pressed and held the printer's information button for approximately three seconds. This printed a Configuration Report and Network Summary page containing the printer's current network settings.
 
-This confirmed that the printer was connected to the wireless network and had received valid network configuration information.
+I reviewed the printed Network Summary and identified the printer's Wi-Fi Direct configuration. The report displayed the Wi-Fi Direct SSID and password, which allowed me to establish a direct wireless connection between my workstation and the printer.
+
+Using the Wi-Fi Direct information provided on the report, I connected directly to the printer's wireless network. After successfully connecting, I opened a web browser and navigated to the printer's embedded web interface using the address provided on the Network Summary page.
+
+This allowed me to access the printer's management interface and review its network configuration. From the web interface, I verified the printer's current status and configured the printer to connect to my home wireless network.
+
+After the printer joined the wireless network, I reviewed the network settings in the embedded web interface and confirmed that the device obtained a valid IP address via DHCP. The printer was assigned the address 192.168.1.248 and displayed the expected network configuration information.
+
+This process confirmed that the printer had successfully connected to the wireless network and could communicate with other devices on the local network.
 
 Image: Printer Network Summary
 
