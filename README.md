@@ -57,7 +57,7 @@ This verified that the printer was successfully joined to the wireless network a
 
 Packet Capture Analysis with `tshark`
 
-I used 'tshark' to capture network traffic between my Ubuntu driver and the printer.
+I used `tshark` to capture network traffic between my Ubuntu laptop and the printer.
 
 The packet capture confirmed:
 - TCP three-way handshake activity
@@ -65,25 +65,23 @@ The packet capture confirmed:
 - HTTP 200 OK responses from the printer
 - Successful communication between both devices
 
-This provided packet-level validation that network connectivity and printer services were functioning correctly.
+This provided packet-level validation that I successfully added my printer to the wireless network and that the printer services were functioning correctly.
 
 <img src="images/tshark validation bash output.png" alt="TShark Validation" width="700"/>
 
-My Ubuntu workstation initiated a TCP connection request to my printer's web server on TCP port 80.
+The above image shows that my Ubuntu workstation initiated a TCP connection request to my printer's web server on TCP port 80. It shows that the printer acknowledged the connection request and demonstrated that it was ready to establish a TCP session. My Ubuntu workstation completed the TCP three-way handshake; this established a reliable communication session.
 
-The printer acknowledged the connection request and demonstrated that it was ready to establish a TCP session.
+The packet capture showed HTTP GET requests from my web browser and HTTP 200 OK responses from the printer's embedded web server. This confirmed that communication between the applications was functioning correctly after the printer was reconnected to the wireless network.
 
-The Ubuntu workstation completed the TCP three-way handshake; this established a reliable communication session.
-
-The printer successfully processed the HTTP request and returned the requested web content.
+Google Chrome generated HTTP GET requests to the printer's embedded web interface, and the printer responded with HTTP 200 OK messages indicating successful delivery of the requested resources.
 
 Skills Practiced
 - Network Troubleshooting
 - Wireless Device Configuration
 - DHCP Validation
-- Embedded Web Interface Administration
-- TCP/IP Fundamentals
-- Packet Capture Analysis
+- Administration of Embedded Web Interface
+- TCP/IP
+- PCAP (Packet Capture) Analysis
 - `tshark`
 - HTTP Communication Analysis
 - Technical Documentation
@@ -107,17 +105,17 @@ This confirmed that my Ubuntu laptop successfully requested information from the
 
 DHCP Network Assignment
 
-The printer received its network configuration automatically through DHCP, allowing it to join the network without manual IP configuration.
+The printer received its network configuration automatically through DHCP. This allowed my printer/scanner to join the wireless network without manual IP configuration.
 
-Lessons Learned
-- Network configuration reports provide valuable troubleshooting information.
-- Embedded web interfaces can quickly validate printer status and connectivity.
-- Router management portals help verify device presence on a network.
+Lessons Learned:
+- Network configuration reports can be critical in printer troubleshooting; they provide the information needed to discover the printer on the wireless network.
+- Embedded web interfaces are useful because they can quickly validate the connectivity status of the printer.
+- Router management portals (that is, the Spectrum portal in this case) can help verify the presence of a particular device on the network.
 - Packet captures provide evidence of successful communication at the protocol level.
 - 'tshark' is an effective command-line tool for network troubleshooting and analysis.
 
 Summary
 
-This project demonstrates practical printer troubleshooting and network validation in a home lab environment. It shows how wireless configuration, device management, router verification, and packet capture analysis can be combined to diagnose and validate network-connected devices.
+This project demonstrates practical printer troubleshooting and network validation in my home network. It shows how wireless configuration, device management, router verification, and packet capture analysis can be combined to diagnose and validate network-connected devices.
 
 [`Back to GitHub Profile`](https://www.github.com/cbueker-it)
