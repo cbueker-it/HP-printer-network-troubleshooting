@@ -112,7 +112,7 @@ Lessons Learned:
 - Embedded web interfaces are useful because they can quickly validate the connectivity status of the printer.
 - Router management portals (that is, the Spectrum portal in this case) can help verify the presence of a particular device on the network.
 - Packet captures provide evidence of successful communication at the protocol level.
-- 'tshark' is an effective command-line tool for network troubleshooting and analysis.
+- `tshark` is an effective command-line tool for network troubleshooting and analysis.
 
 Summary
 
