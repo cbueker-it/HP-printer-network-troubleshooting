@@ -69,6 +69,14 @@ This provided packet-level validation that network connectivity and printer serv
 
 <img src="images/tshark validation bash output.png" alt="TShark Validation" width="700"/>
 
+My Ubuntu workstation initiated a TCP connection request to my printer's web server on TCP port 80.
+
+The printer acknowledged the connection request and demonstrated that it was ready to establish a TCP session.
+
+The Ubuntu workstation completed the TCP three-way handshake; this established a reliable communication session.
+
+The printer successfully processed the HTTP request and returned the requested web content.
+
 Skills Practiced
 - Network Troubleshooting
 - Wireless Device Configuration
