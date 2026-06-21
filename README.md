@@ -33,11 +33,9 @@ Using the Wi-Fi Direct information provided on the report, I connected directly 
 
 This allowed me to access the printer's management interface and review its network configuration. From the web interface, I verified the printer's current status and configured the printer to connect to my home wireless network.
 
-After the printer joined the wireless network, I reviewed the network settings in the embedded web interface and confirmed that the device obtained a valid IP address via DHCP. The printer was assigned the address 192.168.1.248 and displayed the expected network configuration information.
+After the printer joined the wireless network, I reviewed the network settings in the embedded web interface and confirmed that the device obtained a valid IP address via DHCP. The printer was assigned the IP address and displayed the expected network configuration information.
 
 This process confirmed that the printer had successfully connected to the wireless network and could communicate with other devices on the local network.
-
-Image: Printer Network Summary
 
 <img src="images/printer-network-summary-redacted.png" alt="Printer Network Summary" width="700"/>
 
@@ -47,8 +45,6 @@ I opened the printer's web management interface to check its operational status 
 
 This provided confirmation that network communication between the workstation and printer was functioning correctly.
 
-Image: Printer Web Interface
-
 <img src="images/printer-web-interface.png" alt="Printer Web Interface" width="700"/>
 
 Router Device Verification
@@ -57,11 +53,9 @@ I reviewed the Spectrum router management portal and confirmed that the printer 
 
 This verified that the printer was successfully joined to the wireless network and visible to other devices on the local network.
 
-Image: Router Device Detection
-
 <img src="images/router-device-detection-redacted.png" alt="Router Device Detection" width="700"/>
 
-Packet Capture Analysis with 'tshark'
+Packet Capture Analysis with `tshark`
 
 I used 'tshark' to capture network traffic between my Ubuntu driver and the printer.
 
@@ -73,8 +67,6 @@ The packet capture confirmed:
 
 This provided packet-level validation that network connectivity and printer services were functioning correctly.
 
-Image: TShark Validation
-
 <img src="images/tshark validation bash output.png" alt="TShark Validation" width="700"/>
 
 Skills Practiced
@@ -84,7 +76,7 @@ Skills Practiced
 - Embedded Web Interface Administration
 - TCP/IP Fundamentals
 - Packet Capture Analysis
-- 'tshark'
+- `tshark`
 - HTTP Communication Analysis
 - Technical Documentation
 
@@ -93,18 +85,17 @@ Key Networking Concepts Observed
 TCP Three-Way Handshake
 
 The packet capture showed the standard TCP connection process:
-
 SYN
 SYN-ACK
 ACK
 
-This sequence established a reliable connection between the workstation and printer before data transfer occurred.
+This sequence established a reliable connection between my daily driver and the printer before data transfer occurred.
 
 HTTP Communication
 
 The capture also showed HTTP GET requests and HTTP 200 OK responses.
 
-This confirmed that the workstation successfully requested information from the printer web interface and that the printer returned the requested content.
+This confirmed that my Ubuntu laptop successfully requested information from the printer web interface and that the printer returned the requested content.
 
 DHCP Network Assignment
 
