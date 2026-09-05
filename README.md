@@ -2,7 +2,7 @@
 
 I documented the troubleshooting process that I used to reconnect an HP LaserJet M29w printer after moving residences with my wife. This project demonstrates printer network troubleshooting, wireless reconfiguration, device validation, and packet capture analysis using `tshark`.
 
-Lab Objectives
+**Lab Objectives**
 - Restore printer connectivity to a wireless network
 - Verify printer network configuration
 - Confirm printer visibility on the local network
@@ -10,20 +10,28 @@ Lab Objectives
 - Use a packet capture analysis tool to test and validate network communication
 - Document the troubleshooting process and resolution
 
-Environment
+**Environment**
 - Ubuntu Linux Desktop
 - HP LaserJet M29w
 - Spectrum Router
 - Google Chrome
 - `tshark`
 
-Problem
+**Problem**
 
 After moving to a new residence, my printer/scanner was no longer connected to the wireless network. As a result, I was unable to print, nor access the printer's management interface.
 
-Troubleshooting Process
+**Troubleshooting Process**
 
-Printer Network Validation
+Before documenting the specific network issue addressed in this project, I created a general printer troubleshooting workflow to demonstrate a structured approach to diagnosing common printer and printing problems.
+
+- Determine the scope of the issue and isolate whether the problem is printer-side, workstation-side, or network-side.
+- Progress through physical checks, printer validation, Windows configuration, print queue, connectivity, driver/port, and Print Spooler troubleshooting as appropriate.
+- Validate functionality after remediation and document or escalate the issue when additional support is required.
+
+
+
+**Printer Network Validation**
 
 During troubleshooting, I pressed and held the printer's information button for approximately three seconds. This printed a Configuration Report and Network Summary page containing the printer's current network settings.
 
