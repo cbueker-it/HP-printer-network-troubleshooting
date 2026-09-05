@@ -21,16 +21,6 @@ I documented the troubleshooting process that I used to reconnect an HP LaserJet
 
 After moving to a new residence, my printer/scanner was no longer connected to the wireless network. As a result, I was unable to print, nor access the printer's management interface.
 
-**Troubleshooting Process**
-
-Before documenting the specific network issue addressed in this project, I created a general printer troubleshooting workflow to demonstrate a structured approach to diagnosing common printer and printing problems.
-
-- Determine the scope of the issue and isolate whether the problem is printer-side, workstation-side, or network-side.
-- Progress through physical checks, printer validation, Windows configuration, print queue, connectivity, driver/port, and Print Spooler troubleshooting as appropriate.
-- Validate functionality after remediation and document or escalate the issue when additional support is required.
-
-
-
 **Printer Network Validation**
 
 During troubleshooting, I pressed and held the printer's information button for approximately three seconds. This printed a Configuration Report and Network Summary page containing the printer's current network settings.
@@ -47,7 +37,7 @@ This process confirmed that the printer had successfully connected to the wirele
 
 <img src="images/printer-network-summary-redacted.png" alt="Printer Network Summary" width="700"/>
 
-Printer Web Interface Verification
+**Printer Web Interface Verification**
 
 I opened the printer's web management interface to check its operational status and confirm it could be managed across the network.
 
@@ -55,7 +45,7 @@ This provided confirmation that network communication between the workstation an
 
 <img src="images/printer-web-interface.png" alt="Printer Web Interface" width="700"/>
 
-Router Device Verification
+**Router Device Verification**
 
 I reviewed the Spectrum router management portal and confirmed that the printer appeared as an active connected device.
 
@@ -63,7 +53,7 @@ This verified that the printer was successfully joined to the wireless network a
 
 <img src="images/router-device-detection-redacted.png" alt="Router Device Detection" width="700"/>
 
-Packet Capture Analysis with `tshark`
+**Packet Capture Analysis**
 
 I used `tshark` to capture network traffic between my Ubuntu laptop and the printer.
 
@@ -83,7 +73,7 @@ The packet capture showed HTTP GET requests from my web browser and HTTP 200 OK 
 
 Google Chrome generated HTTP GET requests to the printer's embedded web interface, and the printer responded with HTTP 200 OK messages indicating successful delivery of the requested resources.
 
-Skills Practiced
+**Skills Practiced**
 - Network Troubleshooting
 - Wireless Device Configuration
 - DHCP Validation
@@ -94,7 +84,7 @@ Skills Practiced
 - HTTP Communication Analysis
 - Technical Documentation
 
-Key Networking Concepts Observed
+**Key Networking Concepts Observed**
 
 TCP Three-Way Handshake
 
@@ -115,15 +105,17 @@ DHCP Network Assignment
 
 The printer received its network configuration automatically through DHCP. This allowed my printer/scanner to join the wireless network without manual IP configuration.
 
-Lessons Learned:
+**Lessons Learned**
 - Network configuration reports can be critical in printer troubleshooting; they provide the information needed to discover the printer on the wireless network.
 - Embedded web interfaces are useful because they can quickly validate the connectivity status of the printer.
 - Router management portals (that is, the Spectrum portal in this case) can help verify the presence of a particular device on the network.
 - Packet captures provide evidence of successful communication at the protocol level.
 - `tshark` is an effective command-line tool for network troubleshooting and analysis.
 
-Summary
+**Summary**
 
 This project demonstrates practical printer troubleshooting and network validation in my home network. It shows how wireless configuration, device management, router verification, and packet capture analysis can be combined to diagnose and validate network-connected devices.
+
+**Navigation**
 
 [`Back to GitHub Profile`](https://www.github.com/cbueker-it)
